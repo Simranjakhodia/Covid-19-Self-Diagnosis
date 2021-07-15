@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en" > 
+<head>
+    <meta charset=" UTF-8 ">
+    <meta name = "viewport" content= "width-devide-width, initial-scale = 1.0" >
+    <title>Covid-19 Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>    
+<body>   
+    <div class = "main-div">
+        <div class = "inner-div">
+            <span>Type 1/0 FOR THE YES/NO SYMPTOMS IN THE PATIENT</span><br><br>
+            <form method = "POST"action = "{{ url_for('predict')}}"> 
+                 1)Fever?: <input type="text" name = 'Fever           ' placeholder = "Type 1/0" /><br><br>
+                 2)Tiredness?: <input type="text" name = 'Tiredness      ' placeholder = "Type 1/0" /><br><br>
+                 3)Dry-Cough?: <input type="text" name = 'Dry-Cough' placeholder = "Type 1/0" /><br><br>
+                 4)Difficulty-in-Breathing?: <input type="text" name = 'Difficulty-in-Breathing' placeholder = "Type 1/0" /><br><br>
+                 5)Sore-Throat?: <input type="text" name = 'Sore-Throat' placeholder = "Type 1/0" /><br><br>
+                 6)No Sympton?: <input type="text" name = 'None_Sympton' placeholder = "Type 1/0" /><br><br>
+                 7)Pains?: <input type="text" name = 'Pains' placeholder = "Type 1/0" /><br><br>
+                 8)Nasal-Congestion?: <input type="text" name = 'Nasal-Congestion' placeholder = "Type 1/0" /><br><br>
+                 9)Runny-Nose?: <input type="text" name = 'Runny-Nose' placeholder = "Type 1/0" /><br><br>
+                 10)Diarrhea?: <input type="text" name = 'Diarrhea' placeholder = "Type 1/0" /><br><br>
+                 11)None_Experiencing?: <input type="text" name = 'None_Experiencing' placeholder = "Type 1/0" /><br><br>
+                 12)Age_0-9:? <input type="text" name = 'Age_0-9' placeholder = "Type 1/0" /><br><br>
+                 13)Age_10-19:? <input type="text" name = 'Age_10-19' placeholder = "Type 1/0" /><br><br>
+                 14)Age_20-24?: <input type="text" name = 'Age_20-24' placeholder = "Type 1/0" /><br><br>
+                 15)Age_25-59: <input type="text" name = 'Age_25-59' placeholder = "Type 1/0" /><br><br>
+                 16)Age_60+?: <input type="text" name = 'Age_60+' placeholder = "Type 1/0" /><br><br>
+                 17)Gender_Female?: <input type="text" name = 'Gender_Female' placeholder = "Type 1/0" /><br><br>
+                 18)Gender_Male?: <input type="text" name = 'Gender_Male' placeholder = "Type 1/0" /><br><br>
+                 19)Gender_Transgender?: <input type="text" name = 'Gender_Transgender' placeholder = "Type 1/0" /><br><br>
+                 20)Contact_Dont-Know?: <input type="text" name = 'Contact_Dont-Know' placeholder = "Type 1/0" /><br><br>
+                 21)Contact_No?: <input type="text" name = 'Contact_No' placeholder = "Type 1/0" /><br><br>
+                 22)Contact_Yes: <input type="text" name = 'Contact_Yes' placeholder = "Type 1/0" /><br><br>
+
+
+                <input type = "submit" , value = 'PREDICT' >
+                {{ prediction_text }}
+            </form>
+        
+
+           </div> 
+    </div>
+    
+</body>
+</html>
+      
